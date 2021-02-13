@@ -9,13 +9,13 @@ setup(
     
 
     # Define the library name, this is what is used along with `pip install`.
-    name='sigma-coding',
+    name='AzFunctions',
 
     # Define the author of the repository.
-    author='Alex Reed',
+    author='Sarit Maitra',
 
     # Define the Author's email, so people know who to reach out to.
-    author_email='coding.sigma@gmail.com',
+    author_email='sarit.maitra@gmail.com',
 
     # Define the version of this library.
     # Read this as
@@ -35,7 +35,7 @@ setup(
     # This will specify that the long description is MARKDOWN.
     long_description_content_type="text/markdown",
 
-    # Here is the URL where you can find the code, in this case on GitHub.
+    # Here is the Original URL where we can find the code, in this case on GitHub.
     url='https://github.com/areed1192/uploading-python-packages',
 
     # These are the dependencies the library needs in order to run.
