@@ -43,7 +43,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # Create the connection String.
     connection_string = textwrap.dedent('''
         Driver={driver};
-        Server={your_server_name_here},1433;
+        Server={my_server_name},1433;
         Database=sec-filings;
         Uid={username};
         Pwd={password};
@@ -68,7 +68,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # Create the Cursor Object.
     cursor_object: pyodbc.Cursor = cnxn.cursor()
 
-    # Define the Query.
+    # Execute Query.
     upsert_query = textwrap.dedent("""
     SELECT TOP 100 * FROM [dbo].[{table_name}]
     """.format(table_name=table_name))
@@ -76,13 +76,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # Execute the Query.
     cursor_object.execute(upsert_query)
 
-    # Grab the Records.
+    # Fetch all Records.
     records = list(cursor_object.fetchall())
 
-    # Clean them up so we can dump them to JSON.
+    # Clean-up so we can dump them to JSON.
     records = [tuple(record) for record in records]
 
-    logging.info(msg='Query Successful.')
+    logging.info(str(records[1])) # print 1 record for checking
+    
+    logging.info(msg='Query Successful.') # alternate print
 
     if records:
 
