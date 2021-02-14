@@ -1,3 +1,6 @@
+#config files helps us to provide configuration
+#useful to store sensitive information in a separate file instead of main code block
+
 from configparser import ConfigParser
 
 # Initialize the Parser.
