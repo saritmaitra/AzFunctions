@@ -3,8 +3,12 @@
 
 from configparser import ConfigParser
 
+file = 'config.ini'
 # Initialize the Parser.
 config = ConfigParser()
+config.read(file)
+
+print(config.sections())
 
 # Add the Section.
 config.add_section('main')
