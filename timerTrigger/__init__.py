@@ -93,7 +93,7 @@ def main(mytimer: func.TimerRequest) -> None:
     # Connect to the Container.
     container_client = ContainerClient.from_connection_string(
         conn_str=blob_conn_string.value,
-        container_name='microsoft-azure-articles'
+        container_name='MS-AZ-articles'
     )
 
     articles = []
