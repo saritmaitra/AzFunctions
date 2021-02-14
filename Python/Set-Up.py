@@ -26,7 +26,7 @@ setup(
 
     # Here is a small description of the library. This appears
     # when someone searches for the library on https://pypi.org/search.
-    description='A python client library used to leverage the different libraries provided by Sigma Coding.',
+    description='A python client library used to leverage the different libraries provided here.',
 
     # I have a long description but that will just be my README
     # file, note the variable up above where I read the file.
