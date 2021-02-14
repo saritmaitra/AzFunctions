@@ -22,7 +22,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     config_parser = ConfigParser()
 
     # Load the Database Credentials.
-    config_parser.read('SigmaHttpTrigger/config.ini')
+    config_parser.read('Az-Function-Http/config.ini')
     database_username = config_parser.get('sec-database', 'database_username')
     database_password = config_parser.get('sec-database', 'database_password')
 
