@@ -11,8 +11,18 @@ import employee
 
 # CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
 
+
+LOG_FORMAT = "%(asctime)s:%(levelname)s-%(message)s"
 logging.basicConfig(filename='test.log', level=logging.DEBUG,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+                    format= LOG_FORMAT,
+                   filemode = "w")
+
+# filename can be filename = "D:\\python\|LuberJack.log"
+
+logger = logging.getLogger()
+
+#Test the logger
+logger.info("My Fair Lady.")
 
 
 def add(x, y):
