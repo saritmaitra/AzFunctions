@@ -8,8 +8,11 @@ import azure.functions as func
 
 from configparser import ConfigParser
 
+
+#below function handling json serialization
 def default(o):
-    """Converts our Dates and Datetime Objects to Strings."""
+    """Converts our Dates and Datetime Objects to Strings.
+    To get an ISO 8601 date in string format in Python 3, we used the isoformat function."""
     if isinstance(o, (datetime.date, datetime.datetime)):
         return o.isoformat()
 
@@ -28,7 +31,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     logging.info('Loaded Database Credentials.')
 
-    # Grab the table name.
+    # creating "table_name" parameter.
     table_name = req.params.get('table_name', 'DT_Idx_XBRL')
 
     # Grba the Drivers.
