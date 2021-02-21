@@ -32,7 +32,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Loaded Database Credentials.')
 
     # creating "table_name" parameter.
-    table_name = req.params.get('table_name', 'DT_Idx_XBRL')
+    table_name = req.params.get('table_name', 'DT_ksg_XBRL')
 
     # Grba the Drivers.
     logging.info(pyodbc.drivers())
